@@ -1,21 +1,16 @@
 def dcp18():
-    nums = [10, 5, 2, 7, 8, 7]
+    nums = [10, 5, 2, 7, 8, 7,9,18,33,2,97,10,3]
     k = input("Give us a number: ")
     type(k)
-    for x in range (len(nums)):
-        maximum = 0
-        c = x + int(k)-1
-        if c < len(nums):
-            maximum = nums[x]
-            comp = 0
-            if nums[x+2] < nums[x+1]:
-                comp = nums[x+1]
-            else:
-                comp = nums[x+2]
-            if comp < maximum:
-                print(maximum)
-            else:
-                print(comp)
+    x=0
+    while x+int(k)< (len(nums)):        
+        c = x 
+        maximum= nums[c]
+        for y in range (x, x+int(k)):
+            if nums[y]>maximum:
+                maximum=nums[y]
+        print(maximum)
+        x=x+1
     print ("Done with DCP18")
 while True:
     choice = input("Which DCP do you wanna run?")
